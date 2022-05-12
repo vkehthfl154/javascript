@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<script>
+		//출력
+		var six = 6; //우항의 내용(6)을 좌항의 변수(six)에 저장 
+		// console.log(six); 개발자모드의 콘솔창
+		// document.write(six); 화면
+		// alert(six); 경고창
+		var two = 2;
+		// console.log(two);
+		// document.write(two);
+		// alert(two);
+
+		//연산출력
+		document.write(six + two);
+		document.write('<br>'); //<br> : enter 역할
+		document.write(six - two); //붙여쓰면 -2(음수)로 인식
+		document.write('<br>');
+		document.write(six * two);
+		document.write('<br>');
+		document.write(six / two);
+		document.write('<br>');
+		document.write(six % two); //나누기의 나머지
+		//문장 끝의 ;은 문장의 마침표 역할(javascript에서는 생략 가능)
+
+		document.write('<br>');
+
+		var str1 = "자바스크립트";
+		var str2 = "기초";
+		document.write(str1 + str2); //문자에서의 +는 연결연산자
+
+        document.write('<br>');
+
+        var time1 = "현재 시간은 ";
+        var time2 = 1;
+        var time3 = 2;
+        var time4 = "시 입니다.";
+
+        document.write(time1 + time2 + time3 + time4);
+        //문자+숫자 => 숫자를 문자 취급
+        
+        document.write('<br>');
+
+        var time5 = 3;
+        var time6 = 4;
+        var time7 = "시 입니다.";
+        document.write(time5 + time6 + time7);
+        //숫자+문자 => 숫자와 문자의 연결
+
+	</script>
+</body>
+
+</html>

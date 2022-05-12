@@ -1,0 +1,54 @@
+@charset "UTF-8";
+
+*{margin: 0; padding: 0;}
+a{text-decoration: none;}
+
+.clearfix::after{content: ""; clear: both; display: block;}
+
+/* html {scroll-behavior: smooth;} */
+/* --> 스크립트를 따로 작성할 필요 없이 화면이 부드럽게 움직인다.
+ but, 최신버전이라 오류가 매우 많으므로 잘 사용하지 않는다
+ => script에 화면 연결 명령문 따로 작성 */
+
+.nav{
+    /* position에서 fixed 혹은 absolute 적용 시 영역을 자식의 공간만 잡음. display: block 요소의 성질에 의해 부모를 모두 차지하는 속성이 사라진다. 단, 인라인 요소로 변하는 것은 아님  */
+    position: fixed;
+    left: 0; top: 0;
+    right: 0; /* width: 100%; */
+    background-color: rgba(255, 255, 255, 0.3);
+    z-index: 100;
+}
+.nav h1{
+    float: left;
+    font-size: 40px; color: #fff;
+    padding: 5px;
+}
+.nav ul{float: right;}
+.nav ul li{
+    display: inline;
+}
+.nav ul li a{
+    /* 부모가 inline요소일 때, 자식이 display: inline-block이 되면 부모를 무시하고 ul요소의 100%를 차지 */
+    display: inline-block;
+    padding: 20px 15px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+
+#contents{}
+#contents div{height: 100vh;}
+#contents div h2{
+    position: relative;
+    top: 40%;
+    text-align: center;
+    color: #fff;
+    font-size: 70px;
+}
+
+#contents div#section1{background: linear-gradient(to right, #654ea3, #eaafc8);} /* 세번째줄 코드 복사 */
+#contents div#section2{background: linear-gradient(to right, #7f7fd5, #86a8e7, #91eae4);}
+#contents div#section3{background: linear-gradient(to right, #a770ef, #cf8bf3, #fdb99b);}
+#contents div#section4{ background: linear-gradient(to right, #feac5e, #c779d0, #4bc0c8);}
+#contents div#section5{background: linear-gradient(to right, #12c2e9, #c471ed, #f64f59);}
+#contents div#section6{background: linear-gradient(to right, #ef3b36, #ffffff);}

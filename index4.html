@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<script>
+
+		// 제어문-조건문
+		/* 	if(조건문){
+				조건문이 참이면 실행
+			} */
+
+		/* if(조건문){
+			조건이 참이면 실행
+		}else{
+			조건이 거짓이면 실행
+		} */
+
+  	/* if(조건문1){
+			조건문1이 참이면 실행
+		}else if(조건문2){
+			조건문2가 참이면 실행
+		}else{
+			조건문1,2 모두 거짓이면 실행
+		} */
+
+
+		if (3 > 2) {
+			console.log('맞으면 실행합니다.');
+		}
+		if (2 > 3) {
+			console.log('틀리면 여기는 실행되지 않습니다.');
+		}
+
+		var aa = 30;
+		var bb = 20;
+		if (aa < bb) {
+			/* 조건문이 참이면 실행  */
+			console.log('aa가 bb보다 작다')
+		}
+		if (aa<bb) {
+			/* 조건이 참이면 실행 */
+			console.log('aa가 bb보다 작다')
+		}else {
+			/* 조건이 거짓이면 실행 */
+			console.log('aa가 bb보다 크다')
+		}
+
+		var age = 20;
+		var admissionFee = '';
+		if(age<13){
+			admissionFee = '2,000원';
+		}else{
+			admissionFee = "4,000원";
+		}
+		console.log(admissionFee); //4,000원
+		
+		var age2 = prompt('나이입력','정수입력');
+		var admissionFee2 = '';
+		if(age2<13){
+			admissionFee2 = "2,000원입니다.";
+		}else if(age2>=13 && age2<20){
+			admissionFee2 = "4,000원입니다.";
+		}else{
+			admissionFee2 = "6,000원입니다.";
+		}
+		document.write(admissionFee2);
+
+		//비교연산자
+		// a == b : a와 b가 같은가? --> 같으면 true 다르면 false
+		// a != b : a와 b가 다른가? --> 다르면 true 같으면 false
+		// a >= b : a가 b 이상인가? --> 맞으면 true 틀리면 false
+		// a <= b : a가 b 이하인가? --> 맞으면 true 틀리면 false
+
+		// 논리연산자
+		// a && b : and연산자(그리고) --> 둘 중 하나라도 거짓이면 false
+		// a || b : or연산자(또는) --> 둘 중 하나라도 참이면 true
+		// !a : 반대의 의미 --> a가 참이면 false, a가 거짓이면 true
+
+		var cc = (5>2);
+		console.log(cc); //true
+		var cc1 = (5<2);
+		console.log(cc1); //false
+		var cc2 = (5 == 5);
+		console.log(cc2); //true
+		var cc3 = (5 == '5');
+		console.log(cc3); //true?!
+		var cc4 = (5 === '5');  // === : 숫자와 문자를 구분
+		console.log(cc4); //false 
+		var cc5 = (5 != '5'); // 두 개가 다르다면 true
+		console.log(cc5); //false
+		var cc6 = (5 !== '5'); // 두 개가 다르다면 true
+		console.log(cc6); //true
+
+
+//22.05.09
+        var age3 = prompt("나이를 입력하세요", "정수로 입력하세요");
+        var admissionFee3 = '';
+        if(age3 < 13 || age3 >= 65){
+            admissionFee3 = "2,000원";
+        }else if(age3 >=13 && age3 < 20){
+            admissionFee3 = "4,000원";
+        }else{
+            admissionFee3 = "6,000원";
+        }
+        document.write(admissionFee3);
+
+        var html = Number(prompt('html정수입력','')); 
+        var css = Number(prompt('css정수입력', ""));
+        var javaScript = Number(prompt('javaScript정수입력', ""));
+
+        console.log(typeof html); //타입(문자string,숫자number)확인
+        //prompt 입력값 : 문자로 취급
+        //Number(문자형의 숫자) ==> 숫자로 변환
+
+        var avg = (html + css + javaScript)/3;
+        var comment;
+        if(avg >= 60){
+            if(html < 40){
+                comment = 'HTML 40점 미만 불합격'
+            }else if(css < 40){
+                comment = 'CSS 40점 미만 불합격'
+            }else if(javaScript < 40){
+                comment = 'javaScript 40점 미만 불합격'
+            }else{
+                comment = `평균 ${age}점 합격`;
+            }
+
+        }else{
+            // comment = '평균' + avg + '점 불합격'
+            comment = `평균 ${avg}점 불합격`; // `` : 물결버튼       
+        }
+        document.write('<br>');
+        document.write(comment);
+
+	</script>
+</body>
+
+</html>
