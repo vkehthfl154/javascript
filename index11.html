@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<h1 id="test">This is a heading</h1>
+	<button onclick="함수()">클릭하세요</button>
+
+	<h3>덧셈 계산기</h3>
+	<form>
+		첫번째 정수 : <input type="text" id="x"><br>
+		두번째 정수 : <input type="text" id="y"><br>
+		합계 : <input type="text" id="sum"><br>
+		<input type="button" value="계산" onclick="더하기()">
+
+	</form>
+
+	<script>
+		function 더하기(){
+			var x값 = document.getElementById('x').value;
+			var y값 = document.getElementById('y').value;
+			var 합계 = Number(x값) +  Number(y값);
+			console.log(합계);
+			document.getElementById('sum').value = 합계;
+		}
+
+
+
+
+
+		function 함수(){
+			var tit = document.getElementById('test');
+			tit.style.color='red';
+		}
+
+
+	</script>
+</body>
+</html>

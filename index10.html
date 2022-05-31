@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<script>
+		// 함수
+		// 함수는 하나의 실행문을 저장하고, 변수는 하나의 데이터를 저장하여 사용.
+		// 함수는 스크립트 실행문을 보관하는 역할을 하므로 반복 사용되는 코드를 구조화하거나 재활용을 목적으로 사용.
+
+
+		// 함수에서 사용되는 용어
+		// 매개변수 : 함수에 자료를 넘기기 위해 사용되는 변수
+		//           = 인자(parameter)
+		// 리턴값 : 함수를 실행하고 나오는 결과값
+		// 콜백함수 : 함수에 매개변수를 함수로 전달할 때 사용하는 함수
+		// 호출 : 함수를 실행한다는 뜻
+		// 인수(argument) : 함수가 호출될 때 함수로 값을 전달해주는 변수 
+
+
+		// for(초기값; 조건문; 증가감식){
+		// 	조건문이 만족하는 동안 실행문
+		// }
+
+		for(var i=1; i<=4; i++){
+			document.write('이것은 빨간색' + i + '입니다.<br>')
+		}
+
+		document.write('<br>')
+
+		for(var i=1; i<=4; i++){
+			document.write('이것은 파란색' + i + '입니다.<br>')
+		}
+
+		document.write('<br>')
+
+		for(var i=1; i<=4; i++){
+			document.write('이것은 검정색' + i + '입니다.<br>')
+		}
+
+		document.write('---------------------------------------------<br>')
+
+		function 컬러만들기(color){ //color = 매개변수(인자)
+			for(var i = 1; i<=4; i++)
+			document.write('이것은' + color + i + '입니다요~<br>')
+		}
+
+		컬러만들기("빨간색"); //"빨간색" = 인수(argument) //호출
+		컬러만들기("파란색"); //호출
+		컬러만들기("선글라스"); //호출
+
+
+		function 커피만들기(재료){
+			for(var i=1; i<=4; i++){
+				document.write('우리집 커피에는' + 재료 + i + '가 들어간다구요~<br>')
+			}
+		}
+
+		커피만들기(' 최고급 원두');
+
+		document.write('---------------------------------------------<br>')
+
+
+		/* 선언적 함수
+		: 가장 기본적으로 사용하는 함수의 형태
+		함수이름을 설정하고 그 함수 이름을 호출해서 실행 */
+
+		/* function 함수이름(){
+			함수 실행문
+		}
+		
+		함수이름(); //호출이 일어나야 실행됨 */
+
+		function 박함수() {
+			document.write('바캉스 아니고 박함수 입니다~이사람아~!<br>')
+		}
+
+		박함수();
+		document.write('---------------------------------------------<br>')
+
+		// 동일한 함수이름을 사용할 경우 아래에 적힌 함수가 호출된다.
+		function 함수쌍둥이() {
+			document.write("함수쌍둥이1입니다~<br>")
+		}
+
+		function 함수쌍둥이() {
+			document.write("함수쌍둥이2입니다~<br>")
+		}
+
+		함수쌍둥이();
+		document.write('---------------------------------------------<br>')
+
+		// 더하기예제
+
+		function 더하기(a, b) {
+			document.write('더하기: ' + (a + b) + '<br>')
+		}
+
+		더하기(4, 7);
+		document.write('---------------------------------------------<br>')
+
+		function 빼기(a, b) {
+			// document.write('빼기: ' + (a - b) + '<br>')
+			document.write(`빼기: ${a - b}<br>`)
+		}
+
+		빼기(6, 3);
+
+		배달의민족('부경대 청운관', '햄버거', 300)
+
+		function 배달의민족(location, menu, num) {
+			// document.write('여기는 ' + location + '입니다.' + menu + num + '개 부탁드려요~<br>')
+			document.write(`여기는 ${location} 입니다. ${menu} ${num}개 부탁드려요~<br>`) // `` : tab키 위
+		}
+
+		// 배달의민족('부경대 청운관', '짜장면', 3)
+
+
+		//익명함수
+		//함수에 이름이 없음 --> 변수에 넣어서 사용
+
+		// 익명함수(); --> 익명함수는 변수 선언 위쪽에서 함수 호출이 불가.
+
+		var 익명함수 = function () {
+			document.write('나는 이름이 없어요ㅜㅜ<br>')
+		}
+
+		익명함수();
+		document.write('---------------------------------------------<br>')
+
+		/* 리턴값이 있는 함수
+		리턴문(return)을 이용한 매개변수가 있는 함수 예제.
+		리턴값이 있는 함수란 결과값이 있는 함수로, return이라는 키워드를 이용하여 함수의 결과값을 출력하는 방법이다.
+		return은 실행문을 강제로 종료하는 역할도 한다. */
+
+		function 리턴문(num){
+			return num + num;
+		}
+
+		// document.write(리턴문(3));
+		var 값출력 = 리턴문(3);
+		document.write(값출력 + '<br>');
+		document.write('---------------------------------------------<br>')
+
+		//예제 리턴문 10, 20 더하기
+		function 리턴문2(num1, num2){
+			return num1 + num2;
+		}
+		document.write(리턴문2(10, 20) + '<br>');
+		document.write('---------------------------------------------<br>')
+
+		function 리턴3(){
+			var str = '리턴값을 실행합니다.';
+			return str;
+		}
+
+		var 변수 = 리턴3();
+		document.write(리턴3() + '<br>');
+		document.write('---------------------------------------------<br>')
+		document.write(변수 + '<br>');
+		document.write('---------------------------------------------<br>')
+
+		//종료역할을 하는 리턴문
+		function 종료(){
+			document.write("1.함수가 실행됩니다.")
+			return; //함수 종료
+			document.write("2.함수가 실행됩니다.")
+		}
+		종료();
+
+		//재귀함수
+		//햄수 내에서 자신을 다시 호출하는 함수
+		//함함수를 반복문처럼 사용할 때 이용한다.
+
+		// function 재귀(num){
+		// 	document.write("재귀함수");
+		// 	재귀();
+		// }
+
+		// 재귀();
+
+		function 재귀함수(num){
+			if(num == 0){
+				document.write("함수의 실행을 완료합니다.<br>")
+			}else{
+				document.write("함수를 실행합니다.<br>")
+				재귀함수(num - 1)
+			}
+		}
+		재귀함수(5)
+		document.write('---------------------------------------------<br>')
+
+		//콜백함수
+		//함수를 변수에 저장하고 변수를 함수의 인자로 사용하도록 매개변수에 전달하는 함수
+
+		function 콜백함수(num){
+			for(var i=1; i<=3; i++){
+				num(i);
+			}
+		}
+		var 인자변수 = function 인자(){
+			document.write("콜백함수를 실행합니다.<br>")
+		}
+		콜백함수(인자변수);
+		document.write('---------------------------------------------<br>')
+
+		//내부함수
+		//함수 내에 함수를 선언하는 함수
+		function 외부함수(){
+			function 내부함수(){
+				document.write("내부함수를 출력합니다.");
+			}
+			내부함수();
+		}
+		외부함수();
+
+
+
+	</script>
+</body>
+
+</html>
