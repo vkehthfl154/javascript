@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+
+	<script>
+		//while문
+
+		// 초기값
+		// while(조건문){
+		// 	실행문;
+		// 	증가감식
+		// }
+
+		var n = 1;
+		var sum = 0;
+
+		while (n < 8) {
+			sum += n;
+			n++;
+		}
+		console.log(sum); //28
+
+		//do while문
+
+		// 초기값
+		// do{
+		// 	실행문
+		// }while(조건문)
+
+		var m = 1;
+		var sum1 = 0;
+		do {
+			sum1 += m;
+			m++;
+		} while (m < 4)
+		console.log(sum1); //6
+
+		var x = 0,
+			y = 0,
+			z = 6,
+			sum2 = 0,
+			sum3 = 0;
+
+		while (x <= 3) {
+			sum2 += x;
+			x++;
+		}
+		console.log(sum2); //6
+
+		do{
+			sum3 += y;
+			y++;
+		}while(y<=4)
+		console.log(sum3); //10
+
+		do{
+			z++;
+		}while(z<=5);
+		console.log(z); //7
+
+	</script>
+
+
+</body>
+
+</html>
